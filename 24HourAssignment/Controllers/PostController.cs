@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace _24HourAssignment.Controllers
 {
+    [Authorize]
     public class PostController : ApiController
     {
     }
