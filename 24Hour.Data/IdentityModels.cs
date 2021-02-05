@@ -51,13 +51,12 @@ namespace _24Hour.Data
         }
 
         public DbSet<Post> Posts { get; set; }
-<<<<<<< HEAD
         public DbSet<Comment>Comments { get; set; }
-=======
+
     //    public DbSet<Comment> Comments { get; set; }
 
       //  public DbSet<Reply> Replies { get; set; }
->>>>>>> 7105fae8cf2f18cb9847b62cf195f3c20cc44c13
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
