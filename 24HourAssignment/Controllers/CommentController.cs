@@ -9,5 +9,6 @@ namespace _24HourAssignment.Controllers
 {
     public class CommentController : ApiController
     {
+
     }
 }
