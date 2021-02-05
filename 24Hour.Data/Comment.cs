@@ -11,10 +11,12 @@ namespace _24Hour.Data
     public class Comment
     {
         [Key]
-        public int CommentId { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey(nameof(Post))]
         public int PostId { get; set; }
+
+        public virtual Post Post { get; set; }
 
         [Required]
         public string Text { get; set; }
