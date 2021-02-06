@@ -24,7 +24,9 @@ namespace _24Hour.Services
                 new Comment()
                 {
                     Text = model.Text,
-                    Id = model.Id
+                    CommentId = model.CommentId,
+                    Author = _userId
+                    
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -40,11 +42,11 @@ namespace _24Hour.Services
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.Id == id);
+                    .Single(e => e.CommentId == id);
                 return
                     new CommentDetail
                     {
-                        Id = entity.Id,
+                        CommentId = entity.CommentId,
                         Text = entity.Text
                     };
             }
@@ -57,7 +59,7 @@ namespace _24Hour.Services
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.Id == model.Id && e.Author == _userId);
+                    .Single(e => e.CommentId == model.CommentId && e.Author == _userId);
 
                     entity.PostId = model.PostId;
                 entity.Text = model.Text;
@@ -71,7 +73,7 @@ namespace _24Hour.Services
             {
                 var entity = ctx
                     .Comments
-                    .Single(e => e.Id == commentId && e.Author == _userId);
+                    .Single(e => e.CommentId == commentId && e.Author == _userId);
                 ctx.Comments.Remove(entity);
                 return ctx.SaveChanges() > 0;
             }
@@ -89,9 +91,13 @@ namespace _24Hour.Services
                         e =>
                         new CommentListItem
                         {
+
+                            CommentId = e.CommentId,
+                            Text = e.Text
+
                             Id = e.Id,
                             Text = e.Text,
-                        }
+     }
                         
                         );
                 return query.ToArray();
