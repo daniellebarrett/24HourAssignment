@@ -14,7 +14,7 @@ namespace _24Hour.Data
         public int Id { get; set; }
 
         [ForeignKey(nameof(Post))]
-        public int PostId { get; set; }
+        public int? PostId { get; set; }
         public virtual Post Post { get; set; }
 
         [Required]

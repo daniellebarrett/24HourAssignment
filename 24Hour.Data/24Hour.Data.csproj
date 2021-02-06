@@ -86,12 +86,29 @@
   <ItemGroup>
     <Compile Include="Comment.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202102061717388_InitialCreate.cs" />
+    <Compile Include="Migrations\202102061717388_InitialCreate.Designer.cs">
+      <DependentUpon>202102061717388_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102061759445_Updates.cs" />
+    <Compile Include="Migrations\202102061759445_Updates.Designer.cs">
+      <DependentUpon>202102061759445_Updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202102061717388_InitialCreate.resx">
+      <DependentUpon>202102061717388_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102061759445_Updates.resx">
+      <DependentUpon>202102061759445_Updates.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
