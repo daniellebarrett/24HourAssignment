@@ -12,7 +12,7 @@ namespace _24Hour.Services
     {
         
        
-        public bool CreateNote(PostCreate model)
+        public bool CreatePost(PostCreate model)
         {
             var entity =
                 new Post()
@@ -29,6 +29,8 @@ namespace _24Hour.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        
+       
 
         //This is a random change...
     }
