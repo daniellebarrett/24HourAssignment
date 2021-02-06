@@ -62,12 +62,15 @@ namespace _24Hour.Data
 >>>>>>> 9b1a786cfaf92eeda8f2da0f26f7fda4f6b04221
 =======
 
-        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Comment>Comments { get; set; }
 
+<<<<<<< HEAD
         
 
     //    public DbSet<Comment> Comments { get; set; }
 >>>>>>> 80afa01c4d78b7babe3000b4d37e0be1d242b177
+=======
+>>>>>>> 728b53559d5b13970c94c034fd001be2492128e5
 
       //  public DbSet<Reply> Replies { get; set; }
 
