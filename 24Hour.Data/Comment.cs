@@ -17,8 +17,6 @@ namespace _24Hour.Data
         public int PostId { get; set; }
         public virtual Post Post { get; set; }
 
-        public virtual Post Post { get; set; }
-
         [Required]
         public string Text { get; set; }
 

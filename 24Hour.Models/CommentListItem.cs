@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace _24Hour.Models
 {
-    class CommentListItem
+   public class CommentListItem
     {
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public int? PostId { get; set; }
     }
 }
