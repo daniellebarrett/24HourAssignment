@@ -91,9 +91,13 @@ namespace _24Hour.Services
                         e =>
                         new CommentListItem
                         {
+
                             CommentId = e.CommentId,
                             Text = e.Text
-                        }
+
+                            Id = e.Id,
+                            Text = e.Text,
+     }
                         
                         );
                 return query.ToArray();

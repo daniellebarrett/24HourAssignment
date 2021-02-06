@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Comment.cs" />
     <Compile Include="IdentityModels.cs" />
+
     <Compile Include="Migrations\202102061718323_InitialCreate.cs" />
     <Compile Include="Migrations\202102061718323_InitialCreate.Designer.cs">
       <DependentUpon>202102061718323_InitialCreate.cs</DependentUpon>
@@ -97,6 +98,15 @@
     <Compile Include="Migrations\202102061911358_add-migration name.cs" />
     <Compile Include="Migrations\202102061911358_add-migration name.Designer.cs">
       <DependentUpon>202102061911358_add-migration name.cs</DependentUpon>
+    <Compile Include="Migrations\202102061701265_InitialCreate.cs" />
+    <Compile Include="Migrations\202102061701265_InitialCreate.Designer.cs">
+      <DependentUpon>202102061701265_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102061754591_initialMigration.cs" />
+    <Compile Include="Migrations\202102061754591_initialMigration.Designer.cs">
+      <DependentUpon>202102061754591_initialMigration.cs</DependentUpon>
+
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
@@ -115,6 +125,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102061911358_add-migration name.resx">
       <DependentUpon>202102061911358_add-migration name.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102061701265_InitialCreate.resx">
+      <DependentUpon>202102061701265_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102061754591_initialMigration.resx">
+      <DependentUpon>202102061754591_initialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102061820329_testmigration.resx">
+      <DependentUpon>202102061820329_testmigration.cs</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
