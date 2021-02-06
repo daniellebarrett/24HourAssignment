@@ -10,8 +10,12 @@ namespace _24Hour.Services
 {
     public class PostService
     {
-        
-       
+        private readonly Guid _userId;
+        public PostService(Guid userId)
+        {
+            _userId = userId;
+        }
+
         public bool CreatePost(PostCreate model)
         {
             var entity =
@@ -29,8 +33,31 @@ namespace _24Hour.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        
-       
+        public IEnumerable<PostListItem> GetPosts()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Posts
+                    .Where(e => e.Author == _userId)
+                    .Select(
+                        e =>
+                        new PostListItem
+                        {
+                            PostId = e.Id,
+                            Title = e.Title,
+                        }
+
+                        );
+                return query.ToArray();
+            }
+        }
+
+
+    
+
+
 
         //This is a random change...
     }
