@@ -33,6 +33,49 @@ namespace _24Hour.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public PostDetail GetPostById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Posts
+                    .Single(e => e.Id == id);
+                return
+                    new PostDetail
+                    {
+                        PostId = entity.Id,
+                        Text = entity.Text
+                    };
+            }
+        }
+
+        public bool UpdatePost (PostEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Posts
+                    .Single(e => e.Id == model.PostId && e.Author == _userId);
+                entity.Text = model.Text;
+                return ctx.SaveChanges() > 0;
+            }
+        }
+
+        public bool DeletePost(int postId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Posts
+                    .Single(e => e.Id == postId && e.Author == _userId);
+                ctx.Posts.Remove(entity);
+                return ctx.SaveChanges() > 0;
+            }
+        }
+
         public IEnumerable<PostListItem> GetPosts()
         {
             using (var ctx = new ApplicationDbContext())

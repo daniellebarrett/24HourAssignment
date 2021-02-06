@@ -35,9 +35,6 @@ namespace _24HourAssignment.Controllers
 
         }
 
-
-
-
         public IHttpActionResult Get(int id)
         {
             CommentServices commentService = CreateCommentService();
