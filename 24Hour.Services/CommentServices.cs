@@ -29,7 +29,7 @@ namespace _24Hour.Services
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Comments.Add(entity);
-                return ctx.SaveChanges() > 0;
+                return ctx.SaveChanges() == 1;
             }
         }
 
@@ -90,7 +90,7 @@ namespace _24Hour.Services
                         new CommentListItem
                         {
                             Id = e.Id,
-                            Text = e.Text
+                            Text = e.Text,
                         }
                         
                         );
