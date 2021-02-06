@@ -1,16 +1,13 @@
 ﻿using _24Hour.Services;
 using System.Web.Http;
-using using System;
-using Microsoft.AspNet.Identity;
-
-24Hour.Models;
-using Microsoft.AspNet.Identity;
+using _24Hour.Models;
 using System;
+using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http;
+
 
 namespace _24HourAssignment.Controllers
 {
@@ -19,8 +16,8 @@ namespace _24HourAssignment.Controllers
     {
         private PostService CreatePostService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var postService = new PostService(userId);
+            var postId = Guid.Parse(User.Identity.GetUserId());
+            var postService = new PostService(postId);
             return postService;
         }
 
@@ -44,6 +41,8 @@ namespace _24HourAssignment.Controllers
 
             return Ok();
         }
+
+
 
     }
 }
