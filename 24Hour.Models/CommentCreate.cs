@@ -10,7 +10,7 @@ namespace _24Hour.Models
     {
         public string Text { get; set; }
         
-        public int Id { get; set; }
+        public int CommentId { get; set; }
         public int PostId { get; set; }
     }
 }

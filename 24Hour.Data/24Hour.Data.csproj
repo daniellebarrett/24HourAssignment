@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Comment.cs" />
     <Compile Include="IdentityModels.cs" />
+<<<<<<< HEAD
     <Compile Include="Migrations\202102061717388_InitialCreate.cs" />
     <Compile Include="Migrations\202102061717388_InitialCreate.Designer.cs">
       <DependentUpon>202102061717388_InitialCreate.cs</DependentUpon>
@@ -93,6 +94,19 @@
     <Compile Include="Migrations\202102061759445_Updates.cs" />
     <Compile Include="Migrations\202102061759445_Updates.Designer.cs">
       <DependentUpon>202102061759445_Updates.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\202102061718323_InitialCreate.cs" />
+    <Compile Include="Migrations\202102061718323_InitialCreate.Designer.cs">
+      <DependentUpon>202102061718323_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102061759392_Migration1.cs" />
+    <Compile Include="Migrations\202102061759392_Migration1.Designer.cs">
+      <DependentUpon>202102061759392_Migration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102061911358_add-migration name.cs" />
+    <Compile Include="Migrations\202102061911358_add-migration name.Designer.cs">
+      <DependentUpon>202102061911358_add-migration name.cs</DependentUpon>
+>>>>>>> bcadb31330778e1155a48eb8f7e59dd594d9f71d
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
@@ -103,11 +117,22 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\202102061717388_InitialCreate.resx">
       <DependentUpon>202102061717388_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102061759445_Updates.resx">
       <DependentUpon>202102061759445_Updates.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\202102061718323_InitialCreate.resx">
+      <DependentUpon>202102061718323_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102061759392_Migration1.resx">
+      <DependentUpon>202102061759392_Migration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102061911358_add-migration name.resx">
+      <DependentUpon>202102061911358_add-migration name.cs</DependentUpon>
+>>>>>>> bcadb31330778e1155a48eb8f7e59dd594d9f71d
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

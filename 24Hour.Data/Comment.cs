@@ -11,7 +11,7 @@ namespace _24Hour.Data
     public class Comment
     {
         [Key]
-        public int Id { get; set; }
+        public int CommentId { get; set; }
 
         [ForeignKey(nameof(Post))]
         public int? PostId { get; set; }

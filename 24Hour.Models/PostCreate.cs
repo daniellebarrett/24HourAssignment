@@ -11,6 +11,7 @@ namespace _24Hour.Models
     {
         [Required]
         public string Title { get; set; }
+        
 
         // add range and max length here
         public string Text { get; set; }
